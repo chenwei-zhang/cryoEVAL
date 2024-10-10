@@ -1,6 +1,6 @@
-# CryoEVAL: Evaluation Metrics for Atomic Model Building Methods
+# CryoEVAL: Evaluation Metrics for Atomic Model Building Methods Based on Cryo-EM Density Maps
 
-This project is to evaluate the performance of different atomic model building approaches.
+This project is to evaluate the performance of different atomic model-building approaches.
 
 
 ## Pre-requisites
@@ -17,8 +17,6 @@ This project is to evaluate the performance of different atomic model building a
 |tqdm                           |4.66.2                 |
 
 
-
-
 ## Installation
 
 ```bash
@@ -26,7 +24,6 @@ cd <your_project_path>
 
 git clone https://github.com/chenwei-zhang/cryoEVAL.git
 ```
-
 
 
 ## Usage
@@ -43,11 +40,11 @@ python evaluate.py -p <predict_model.pdb> -t <target_model.pdb> -o <output_path>
 - -o : Output path
 
 #### Optional
-- --modelangelo True : Add ModelAngelo Paper's evaulation metrics
+- --modelangelo True : Add ModelAngelo Paper's evaluation metrics
 - --phenix True : Add phenix.chain_comparison evaluation metrics
 
 
-### Example
+## Example
 
 ```bash
 cd cryoEVAL/src
@@ -56,8 +53,6 @@ python evaluate.py -p ../example/3j9s_agl.cif -t ../example/3j9s_ref.pdb -o ../e
 ```
 The evaluation results can be found in the `../example/eval_result.log` file.
 
-
-<br>
 
 ## Credits
 
@@ -70,7 +65,7 @@ We would like to give credit to the following software projects that were partia
   License: Distributed under the MIT License.
 
 - [Phenix](https://phenix-online.org/documentation/reference/chain_comparison.html)  
-  License: Phenix is available without cost to users for non-profit work (typically academic and non-profit institutions).
+  License: Phenix is free to users for non-profit work (typically academic and non-profit institutions).
 
 
 ## Support
