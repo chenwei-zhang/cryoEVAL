@@ -89,13 +89,13 @@ def main(parsed_args):
         
         
         output = {
-            "found": found,
-            "ca_score": ca_score,
-            "seq_match": seq_match,
-            "seq_score": seq_score,
-            "mean_length":mean_length,
-            "fragments": fragments,
-            "bad_connections": bad_connections, 
+            "phenix_found": found,
+            "phenix_ca_score": ca_score,
+            "phenix_seq_match": seq_match,
+            "phenix_seq_score": seq_score,
+            "phenix_mean_length":mean_length,
+            "phenix_fragments": fragments,
+            "phenix_bad_connections": bad_connections, 
         }
 
         return output

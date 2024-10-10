@@ -238,14 +238,14 @@ def main(parsed_args):
         
         
     output = {
-        "backbone_rmsd": "{:.3f}".format(rmsd),
-        "ca_rmsd": "{:.3f}".format(ca_rms),
-        "recall": "{:.3f}".format(recall),
-        "precision": "{:.3f}".format(precision),
-        "f1score": "{:.3f}".format(2 * precision * recall / (precision + recall)),
-        "lddt_score": "{:.3f}".format(lddt_score),
-        "sequence_match": "{:.3f}".format(sequence_match),
-        "sequence_coverage": "{:.3f}".format(sequence_match * recall),
+        "modelangelo_backbone_rmsd": "{:.3f}".format(rmsd),
+        "modelangelo_ca_rmsd": "{:.3f}".format(ca_rms),
+        "modelangelo_recall": "{:.3f}".format(recall),
+        "modelangelo_precision": "{:.3f}".format(precision),
+        "modelangelo_f1score": "{:.3f}".format(2 * precision * recall / (precision + recall)),
+        "modelangelo_lddt_score": "{:.3f}".format(lddt_score),
+        "modelangelo_sequence_match": "{:.3f}".format(sequence_match),
+        "modelangelo_sequence_coverage": "{:.3f}".format(sequence_match * recall),
         }
     
     return output    

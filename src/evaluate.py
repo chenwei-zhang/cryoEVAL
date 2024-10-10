@@ -5,6 +5,16 @@ from modelangeloEval import main as modelangeloEval_main
 from phenixCC import main as phenixCC_main
 from cryoEVAL import main as cryoEVAL_main
 
+# Define a function to convert string input to boolean
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
 
 def add_args(parser):
     parser.add_argument(
@@ -37,19 +47,19 @@ def add_args(parser):
     )
     parser.add_argument(
         "--cryoEVAL",
-        type=bool,
+        type=str2bool,
         default=True,
         help="If True, do cryoEVAL evaluation",
     )    
     parser.add_argument(
         "--modelangelo",
-        type=bool,
+        type=str2bool,
         default=False,
         help="If True, do modelangelo evaluation",
     )
     parser.add_argument(
         "--phenix",
-        type=bool,
+        type=str2bool,
         default=False,
         help="If True, do phenix.chain_comparison evaluation",
     )
